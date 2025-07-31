@@ -1,0 +1,116 @@
+
+#main{
+    width:100%;
+    height:920px;
+    background-color: aqua;
+}
+
+#main>#header{
+    width:100%;
+    height:720px;
+    background-color: gray;
+    position: relative;
+}
+
+#main>#header>#header-main{
+    width:1200px;
+    height:60%;
+    margin:0 auto;
+    background-color: khaki;
+    position: relative;
+}
+
+#header-main>#logo{
+    width:500px;
+    height:300px;
+    background-color: hotpink;
+
+    position: absolute;
+    left:10%;
+    top:100px;
+}
+
+#header-main>#logo>img{
+    width:300px;
+    height:105px;
+    
+    position: relative;
+    left:50px;
+}
+
+#header-main>#logo>h1{
+    font-size:24px;
+}
+
+#header-main>#login-area{
+    width:400px;
+    height:400px;
+    background-color: indigo;
+    
+    position: absolute;
+    left:60%;
+    top:100px;
+}
+
+#login-area>h2{
+    font-size: 14px;
+    color:#1c1e21;
+    text-align: center;
+    margin-top: 20px;
+    background-color: cadetblue;
+}
+#login-area>h2>a{
+    color:black;
+    text-decoration: none;
+}
+#login-area>h2>a:hover{
+    text-decoration: underline;
+}
+
+#main>#footer{
+    width:100%;
+    height:200px;
+    background-color: honeydew;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+@media all and (max-width: 1300px) {
+    #main>#header>#header-main{
+        width:100%;
+    }
+    #header-main>#logo{
+        width:400px;
+        height:300px;
+        
+    }
+
+    #header-main>#login-area{
+        position: absolute;
+        margin-right:20%;
+    }
+  }
+
+  @media all and (max-width: 877px) {
+    
+    #main>#header{
+        width:100%;
+        height:800px;
+    }
+
+    #main>#header>#header-main{
+        width:500px;
+        height:750px;
+    }
+    #header-main>#logo{
+       margin:0 auto;
+       top:50px;
+       
+    }
+
+    #header-main>#login-area{
+        position: absolute;
+        left:10%;
+        top:40%;  
+    }
+  }

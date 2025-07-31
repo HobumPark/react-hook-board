@@ -1,0 +1,183 @@
+
+#post-write{
+
+    width:100%;
+    /* background-color: aqua; */
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+#title-area{
+    padding-top:5px;
+    padding-left:50px;
+    box-sizing: border-box;
+    width:95%;
+    height:60px;
+    /* background-color: blueviolet; */
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    left:30px;
+    border-radius: 10px;
+    padding-right:50px;
+
+    box-sizing: border-box;
+}
+
+#title-area>div{
+    float:left;
+}
+
+#title-area>#title-div{
+    width:50%;
+    /* background-color: palegreen; */
+    border-radius: 10px;
+}
+#title-area>#author-div{
+    width:40%;
+    /* background-color: paleturquoise; */
+    border-radius: 10px;
+}
+
+
+#title-area>div>label{
+    font-size:30px;
+    font-weight: bold;
+    float:left;
+    margin-right: 10px;
+}
+
+#title-area>#title-div>input{
+    float:left;
+    width:700px;
+    height:50px;
+    margin-right:5%;
+    border-radius: 10px;
+    color:#666;
+    font-size:'20px';
+    padding-left:10px;
+    box-sizing: border-box;
+}
+
+#title-area>#author-div>input{
+    width:200px;
+    height:50px;
+    margin-right:5%;
+    border-radius: 10px;
+    color:#666;
+    font-size:'20px';
+    padding-left:10px;
+    box-sizing: border-box;
+}
+
+#title-area>button{
+    width:80px;
+    height:45px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size:20px;
+    float:right;
+
+    position: absolute;
+    right:10px;
+}
+
+#cont-area{
+    padding-left:50px;
+    box-sizing: border-box;
+    display: block;
+}
+
+#cont-area>label{
+    font-size:30px;
+    font-weight: bold;
+
+    position: relative;
+    top:15px;
+}
+
+#cont-area>textarea{
+    position: relative;
+    top:35px;
+}
+
+#cont-area .ql-toolbar{
+    width:80%;
+    /* background-color: aquamarine; */
+}
+
+#cont-area .ql-editor{
+    height: 380px;
+    border:1px solid gray;
+    /* background-color: aquamarine; */
+}
+  
+
+@media all and (max-width: 1400px) {
+    #title-area{
+        height:140px;
+    }
+    #title-area>div{
+        display: block;
+    }
+
+    #title-area>#title-div{
+        width:90%;
+        margin-bottom: 10px;
+    }
+    #title-area>#title-div>input{
+        width:80%;
+    }
+    #title-area>#author-div{
+        width:90%;
+    }
+    #title-area>#author-div>input{
+        width:60%;
+    }
+}
+
+@media all and (max-width: 720px) {
+
+    #title-area{
+        width:100%;
+        position: relative;
+        left:-20px;
+    }
+
+    #title-area{
+        height:210px;
+    }
+    #title-area>#title-div{
+        width:100%;
+    }
+    #title-area>#title-div>input{
+        width:70%;
+    }
+    #title-area>#author-div{
+        width:100%;
+    }
+    #title-area>#author-div>input{
+        width:50%;
+    }
+
+    #title-area>button{
+        position: absolute;
+        bottom:10px;
+        left:50px;
+
+        width:75%;
+        height:50px;
+    }
+
+    #cont-area>label{
+        position: relative;
+        left:-20px;
+    }
+    
+    #cont-area>textarea{
+        position: relative;
+        left:-20px;
+    }
+}

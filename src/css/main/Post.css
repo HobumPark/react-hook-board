@@ -1,0 +1,120 @@
+a{
+    text-decoration: none;
+    color:#222328;
+}
+
+#post{
+    display: block;
+    width:90%;
+    height:42px;
+    /* background-color: darkcyan; */
+    margin-bottom: 1px;
+    font-size:16px;
+    margin:0 auto;
+    text-align: center;
+}
+
+#post>ul>li{
+    float:left;
+    height:40px;
+    padding-top:8px;
+    box-sizing: border-box;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#post>ul>li:first-child{
+    /* background-color: darkgoldenrod; */
+    width:5%;
+}
+
+#post>ul>li:nth-child(2){
+    /* background-color: darkgreen; */
+    width:40%;
+}
+
+#post>ul>li:nth-child(3){
+    /* background-color: darkmagenta; */
+    width:10%;
+}
+
+#post>ul>li:nth-child(4){
+    /* background-color: darkred; */
+    width:15%;
+}
+
+#post>ul>li:nth-child(5){
+    /* background-color: darkturquoise; */
+    width:5%;
+}
+
+#post>ul>li:nth-child(6){
+    /* background-color: darkmagenta; */
+    width:10%;
+
+}
+
+
+@media all and (max-width: 1300px) {
+    #post{
+        /* background-color: red; */
+    }
+}
+
+@media all and (max-width: 1050px) {
+    #post{
+        /* background-color: green; */
+    }
+
+    #post>ul>li:nth-child(2){
+        /* background-color: darkgreen; */
+        width:45%;
+    }
+
+    #post>ul>li:first-child{
+        display: none;
+    }
+}
+
+@media all and (max-width: 900px) {
+    #post{
+        /* background-color: blue; */
+    }
+
+    #post>ul>li:nth-child(2){
+        /* background-color: darkgreen; */
+        width:60%;
+    }
+
+    #post>ul>li:last-child{
+        display: none;
+    }
+}
+
+@media all and (max-width: 600px) {
+    #post{
+        /* background-color: blue; */
+ 
+    }
+
+    #post>ul>li:nth-child(2){
+        /* background-color: darkgreen; */
+        width:80%;
+        height:45px;
+    }
+
+    #post>ul>li:nth-child(4){
+        /* background-color: darkred; */
+        width:20%;
+        height:45px;
+    }
+
+    #post>ul>li:nth-child(3){
+        display: none;
+    }
+    #post>ul>li:nth-child(5){
+        display: none;
+    }
+}

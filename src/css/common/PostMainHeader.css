@@ -1,0 +1,41 @@
+
+#post-main-header{
+    width:100%;
+    height:180px;
+    display:block;
+    margin:0 auto;
+    margin-top:50px;
+    background:url(../../images/sub_visual06.png) no-repeat;
+    background-size:cover;
+    position: relative;
+    background-color: cadetblue;
+}
+
+#post-main-header>img{
+    position: absolute;
+    left:40%;
+    top:50px;
+}
+#post-main-header>h1{
+    color:#ffffff;
+    font-size:50px;
+    font-weight: bold;
+    text-align: center;
+
+    position: absolute;
+    left:40%;
+    top:70px;
+}
+
+@media all and (max-width: 600px) {
+    #post-main-header>img{
+        position: absolute;
+        left:25%;
+        top:50px;
+    }
+    #post-main-header>h1{
+        position: absolute;
+        left:35%;
+        top:70px;
+    }
+}

@@ -1,0 +1,92 @@
+.Posts{
+    /* background-color: aqua; */
+    width:100%;
+}
+
+.Posts>#post-list{
+    /* background-color: aqua; */
+    margin:0 auto;
+}
+
+#post-list>div{
+    padding-left:120px;
+    box-sizing: border-box;
+}
+
+#post-list>div:first-child{
+    margin-bottom: 5px;
+    margin:0 auto;
+    box-sizing: border-box;
+    /* background-color: brown; */
+}
+
+#post-list>div:first-child>ul>li{
+    position: relative;
+}
+
+#post-list>div:first-child>ul>li::after{
+    content:'';
+    display:block;
+    width:1px;
+    height:18px;
+    background-color: #777;
+    position: absolute;
+    top:10px;
+}
+
+#post-list>div:first-child>ul>li:first-child::after{
+    display:none;
+}
+#post-list>div:first-child>ul>li:nth-child(2)::after{
+    top:10px;
+}
+
+#post-list>div:first-child>ul>li{
+    border-top: 2px solid #0b3d6e;
+    color: #0b3d6e;
+    font-weight: bold;
+}
+#post-list>div:last-child>ul>li{
+    border-bottom: 1px solid #777;
+}
+
+#post-list>#post>ul>li{
+
+}
+
+#write-area{
+    /* background-color: yellowgreen; */
+    width:60%;
+    margin: 0 auto;
+}
+#write-btn{
+    /*width:120px;*/
+    height:35px;
+    background-color: #777;
+    font-size:18px;
+    font-weight: bold;
+    position: relative;
+    left:45%;
+    margin-right:10px;
+    margin-top:20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+@media all and (max-width: 1300px) {
+
+}
+
+@media all and (max-width: 995px) {
+    .Posts>#post-list{
+       position: relative;
+       left:-70px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .Posts>#post-list{
+        position: relative;
+        left:-100px;
+     }
+}
