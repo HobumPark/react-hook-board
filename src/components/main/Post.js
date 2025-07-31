@@ -19,7 +19,7 @@ class Post extends Component {
                 <li>{this.props.id}</li>
                 <li><Link to={`/postView?no=${this.props.id}`}><a href="#">{this.props.title}</a></Link></li>
                 <li>{this.props.author}</li>
-                <li>{this.props.regDate}</li>
+                <li>{this.props.reg_date}</li>
                 <li>{this.props.attach}</li>
                 <li>{this.props.hits}</li>
             </ul>

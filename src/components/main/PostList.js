@@ -22,7 +22,7 @@ class PostList extends Component {
     const {postList}=this.props;
     const result=postList.map(post=>(
       <Post key={post.no} id={post.no} title={post.title} 
-      author={post.author} regDate={post.regDate}
+      author={post.author} reg_date={post.reg_date}
       attach={post.attach} hits={post.hits}></Post>)
       )
         return (

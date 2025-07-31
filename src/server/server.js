@@ -62,6 +62,7 @@ app.post('/api/write/post', (req, res) => {
     const regDate=req.body.regDate
     const attach=req.body.attach
     const hits=req.body.hits
+    const originalFileName=req.body.originalFileName  
     const saveFileName=req.body.saveFileName  
 
     console.log('title:',title)
@@ -70,12 +71,13 @@ app.post('/api/write/post', (req, res) => {
     console.log('regDate:',regDate)
     console.log('attach:',attach)
     console.log('hits:',hits)
+    console.log('originalFileName:',originalFileName)
     console.log('saveFileName:',saveFileName)
 
     //insert into board(title,contents,author,regDate,attach,hits) values()
     //복구쿼리 (삭제) : delete from board where no=23
-    db.query(`insert into board(title,contents,author,regDate,attach,fileName,hits)`+
-     `values('${title}','${contents}','${author}','${regDate}','${attach}','${saveFileName}',${hits})`, (err, data) => {
+    db.query(`insert into board(title,contents,author,reg_date,attach,original_file_name,stored_file_name, hits)`+
+     `values('${title}','${contents}','${author}','${regDate}','${attach}', '${originalFileName}','${saveFileName}',${hits})`, (err, data) => {
         if(!err) res.send({ board_res : data });
         else res.send(err);
     })

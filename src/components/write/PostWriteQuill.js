@@ -66,11 +66,14 @@ class PostWrite extends Component {
         formData.append('addtime', moment().format('YYYYMMDDHHmmss'));
 
         await axios.post("/api/upload", formData).then(res => {
+            alert('성공')
             console.log(res)
             console.log(res.data.savefile)
+            const originalFileName=this.state.selectedFile.name
             const saveFileName=res.data.savefile
-            alert('성공')
-            this.props.enrollPost(title,contents,author,saveFileName)
+            alert('originalFileName:'+originalFileName)
+            alert('saveFileName:'+saveFileName)
+            this.props.enrollPost(title,contents,author,originalFileName,saveFileName)
         }).catch(err => {
             alert('실패')
         })

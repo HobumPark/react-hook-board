@@ -25,11 +25,12 @@ class App extends Component {
   
   }
 
-  enrollPost=(title,contents,author,saveFileName)=>{
+  enrollPost=(title,contents,author,originalFileName,saveFileName)=>{
         alert("글 등록!(App)")
         alert("title:"+title)
         alert("contents:"+contents)
         alert("author:"+author)
+        alert("originalFileName:"+originalFileName)
         alert("saveFileName:"+saveFileName)
         
         //글번호는 지정안해도됨
@@ -46,7 +47,12 @@ class App extends Component {
         }
 
         let regDate=year+"-"+month+"-"+day
-      const post ={title:title,contents:contents,author:author,regDate:regDate,attach:'Y',hits:0,saveFileName:saveFileName}
+      const post ={'title':title,'contents':contents,'author':author,
+                   'regDate':regDate,'attach':'Y',
+                   'originalFileName':originalFileName,'saveFileName':saveFileName,'hits':0,}
+
+      console.log('추가할 게시글')
+      console.log(post)
       this.axiosEnrollPost(post)
   }
 

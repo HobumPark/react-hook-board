@@ -7,8 +7,9 @@ const storage = multer.diskStorage({
     // 파일이 저장되는 경로입니다.
   },
   filename: function(req, file, cb) {
-    cb(null, moment().format('YYYYMMDDHHmmss') + "_" + file.originalname);  
-    // 저장되는 파일명
+    const originalName = Buffer.from(file.originalname, 'latin1').toString('utf8');
+    const safeName = moment().format('YYYYMMDDHHmmss') + "_" + originalName;
+    cb(null, safeName);
   }
 });
 

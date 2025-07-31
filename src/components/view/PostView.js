@@ -55,8 +55,10 @@ class PostView extends Component {
         console.log('this.state',this.state)
         const result=postByNo.map(post=>(
             <PostDetail no={post.no} title={post.title} contents={post.contents}
-            author={post.author} regDate={post.regDate}
-            attach={post.attach} fileName={post.fileName} hits={post.hits}/>)
+            author={post.author} regDate={post.reg_date}
+            attach={post.attach} 
+            original_file_name={post.original_file_name} stored_file_name={post.stored_file_name} 
+            hits={post.hits}/>)
             )
         return(
             

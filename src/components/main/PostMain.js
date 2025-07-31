@@ -35,11 +35,11 @@ class PostMain extends Component {
     var date;
     var fullDate='';
     for(var i=0; i<boardList.length; i++){
-      console.log(boardList[i].regDate)
-      date=new Date(boardList[i].regDate)
+      console.log(boardList[i].reg_date)
+      date=new Date(boardList[i].reg_date)
       fullDate
       =this.transDate(date)
-      boardList[i].regDate=fullDate
+      boardList[i].reg_date=fullDate
     }
 
     this.setState({
@@ -59,16 +59,17 @@ class PostMain extends Component {
     //alert("요청!")
     const res = await axios.get('/api/get/board');
     console.log(res);
+    console.log('res.data.board_res');
     console.log(res.data.board_res);
     var boardList=res.data.board_res
     var date;
     var fullDate='';
     for(var i=0; i<boardList.length; i++){
-      console.log(boardList[i].regDate)
-      date=new Date(boardList[i].regDate)
+      console.log(boardList[i].reg_date)
+      date=new Date(boardList[i].reg_date)
       fullDate
       =this.transDate(date)
-      boardList[i].regDate=fullDate
+      boardList[i].reg_date=fullDate
     }
 
     this.setState({

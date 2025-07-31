@@ -138,9 +138,8 @@ class PostDetail extends Component {
 
     fileDownLoad=async()=>{
         alert("파일 다운로드!")
-        const result=await axios.get(`/download/${this.props.fileName}`,{
-        responseType: 'blob' })
-        download(result.data, this.props.fileName);
+        const result=await axios.get(`/download/${this.props.stored_file_name}`,{responseType: 'blob' })
+        download(result.data, this.props.stored_file_name);
     }
 
 
@@ -182,7 +181,7 @@ class PostDetail extends Component {
                 <li>
                     <span>첨부:{this.props.attach}</span>
                     <br></br>
-                    <span>파일:<b id="file-down" onClick={this.fileDownLoad}>{this.props.fileName}</b></span>
+                    <span>파일:<b id="file-down" onClick={this.fileDownLoad}>{this.props.original_file_name}</b></span>
                 </li>
                 <li>
                     {this.state.contents}
@@ -268,7 +267,7 @@ class PostDetail extends Component {
                     <li>
                         <ul id="sub-ul">
                             <li><span>작성자:{this.props.author}</span></li>
-                            <li><span>등록일:{this.props.regDate}</span></li>
+                            <li><span>등록일:{this.props.reg_date}</span></li>
                             <li><span>조회수:{this.props.hits}</span></li>
                         </ul>
                     </li>
