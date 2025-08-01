@@ -1,20 +1,7 @@
 
 import React, { Component } from 'react';
 import '../../css/write/PostWrite.css';
-import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-
-let textAreaStyle = {
-    paddingTop:'20px',
-    paddingLeft:'20px',
-    boxSizing:'border-box',
-    resize:'none',
-    width:'90%',
-    height:'500px',
-    borderRadius: '10px',
-    color:'#666',
-    fontSize:'20px'
-};
 
 class PostWrite extends Component {
 
@@ -66,8 +53,7 @@ class PostWrite extends Component {
             </span>
             <span id="cont-area">
                 <label id="cont">내용</label><br/>
-                <textarea name="contents" style={textAreaStyle}
-                placeholder="내용을 입력해주세요"
+                <textarea name="contents" placeholder="내용을 입력해주세요"
                 onChange={this.handleChange}></textarea> 
             </span>
             

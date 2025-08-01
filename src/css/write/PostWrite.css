@@ -101,6 +101,16 @@
 #cont-area>textarea{
     position: relative;
     top:35px;
+    
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    resize: none;
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+    color: #666;
+    font-size: 20px;
 }
 
 #cont-area .ql-toolbar{

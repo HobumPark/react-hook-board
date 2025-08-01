@@ -3,18 +3,8 @@ import React, { Component } from 'react';
 import '../../css/view/PostDetail.css';
 import axios from 'axios';
 import download from 'downloadjs';
-
-let textAreaStyle = {
-    paddingTop:'20px',
-    paddingLeft:'20px',
-    boxSizing:'border-box',
-    resize:'none',
-    width:'90%',
-    height:'130px',
-    borderRadius: '10px',
-    color:'#666',
-    fontSize:'20px'
-};
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 class PostDetail extends Component {
 
@@ -142,6 +132,11 @@ class PostDetail extends Component {
         download(result.data, this.props.stored_file_name);
     }
 
+    setContents=(value)=>{
+        this.setState({
+            contents:value
+        })
+    }
 
     render(){
 
@@ -272,8 +267,11 @@ class PostDetail extends Component {
                         </ul>
                     </li>
                     <li>첨부:{this.props.attach}</li>
-                    <li><textarea defaultValue={this.state.contents} style={textAreaStyle} 
-                    id="edit-contents" name="contents" onChange={this.handleChange}/></li>
+                    <li>
+                        <ReactQuill theme="snow" value={this.state.contents} 
+                                        onChange={this.setContents} name="contents"/>
+  
+                    </li>
                     <li>
                         <button>
                             <div>
